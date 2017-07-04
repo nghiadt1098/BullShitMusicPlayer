@@ -161,13 +161,9 @@ public class mp3playerActivity extends Activity {
                 int position = ma.getNowPlaying();
 
                 try {
-                    if (position + 1 != ma.getMp3Files().size()) {
-                        playTrack(position+1);
-
-                    } else{
-                        playTrack(0);
+                   nextTrack();
                     }
-                } catch (Exception ex){
+                 catch (Exception ex){
                     ex.printStackTrace();
                 }
             }
@@ -193,15 +189,15 @@ public class mp3playerActivity extends Activity {
         btnMdfSuffle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (ma.isSuffle()){
+                if (ma.isSuffle()==true){
                     ma.setSuffle(false);
                     btnMdfSuffle.setBackground(ResourcesCompat.getDrawable(getResources(),
-                            R.drawable.mediaplayer_suffle_ic,
+                            R.drawable.mediaplayer_pressedsuffle_ic,
                             null));
                 } else {
                     ma.setSuffle(true);
                     btnMdfSuffle.setBackground(ResourcesCompat.getDrawable(getResources(),
-                            R.drawable.mediaplayer_pressedsuffle_ic,
+                            R.drawable.mediaplayer_suffle_ic,
                             null));
                 }
             }
@@ -298,7 +294,8 @@ public class mp3playerActivity extends Activity {
     protected void nextTrack(){
         Log.d(TAG, "nextTrack: ");
         if (ma.isSuffle()==true){
-            playTrack(new Random().nextInt(ma.getMp3Files().size()));
+            Random random=new Random();
+            playTrack(random.nextInt(ma.getMp3Files().size()));
         } else {
             int position = ma.getNowPlaying();
             if (position + 1 != ma.getMp3Files().size()) {
