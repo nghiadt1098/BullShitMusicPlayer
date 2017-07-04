@@ -1,0 +1,14 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:id="@android:id/progress"
+        android:left="0dp">
+        <clip android:drawable="@drawable/seekbar" />
+    </item>
+    <item android:id="@android:id/background"
+        android:left="12dp">
+        <clip android:drawable="@drawable/seekbar_background" />
+
+    </item>
+
+
+</layer-list>

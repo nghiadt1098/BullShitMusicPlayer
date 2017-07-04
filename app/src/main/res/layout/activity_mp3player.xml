@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/wallpaper"
+    android:padding="15dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <ImageButton
+                android:id="@+id/mdf_prev_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/mediaplayer_prevbtn"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <ImageButton
+                android:id="@+id/mdf_play_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/mediaplayer_stopbtn"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <ImageButton
+                android:id="@+id/mdf_next_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/mediaplayer_nextbtn"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:thumb="@drawable/custom_thumb"
+        android:progressDrawable="@drawable/custom_seekbar"
+        android:layout_marginBottom="12dp"
+
+        android:layout_above="@+id/linearLayout"
+        android:background="@drawable/seekbar_background"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/mdf_current_position"
+        android:textColor="#e0e0e0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekBar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="13dp"
+        android:text="00:00" />
+
+    <TextView
+        android:id="@+id/mdf_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/mdf_current_position"
+        android:text="00:00"
+        android:textColor="#e0e0e0" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/mdf_title"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:layout_alignParentEnd="true"
+        android:padding="1dp"
+        android:id="@+id/linearLayout2">
+
+        <ImageButton
+            android:id="@+id/mdf_repeat"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            android:background="@drawable/mediaplayer_pressedrepeat_all_ic" />
+
+        <ImageButton
+            android:id="@+id/mdf_suffle"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/mediaplayer_pressedsuffle_ic" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/mdf_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/mdf_artist"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:maxLength="20"
+        android:maxLines="2"
+        android:text="Song Name"
+        android:textColor="#e0e0e0"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/mdf_artist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Song Artist"
+        android:textColor="#e0e0e0"
+        android:maxLines="1"
+        android:maxLength="25"
+        android:textSize="18dp"
+        android:layout_above="@+id/mdf_current_position"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <ImageView
+        android:id="@+id/mdf_coverArt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout2"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@null"
+        android:src="@drawable/ic_turnable" />
+
+
+</RelativeLayout>
