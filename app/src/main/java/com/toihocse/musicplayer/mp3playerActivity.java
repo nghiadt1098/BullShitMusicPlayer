@@ -88,11 +88,11 @@ public class mp3playerActivity extends Activity {
         }
         if (ma.isSuffle()){
             btnMdfSuffle.setBackground(ResourcesCompat.getDrawable(getResources(),
-                    R.drawable.mediaplayer_pressedsuffle_ic,
+                    R.drawable.mediaplayer_suffle_ic,
                     null));
         } else {
             btnMdfSuffle.setBackground(ResourcesCompat.getDrawable(getResources(),
-                    R.drawable.mediaplayer_suffle_ic,
+                    R.drawable.mediaplayer_pressedsuffle_ic,
                     null));
         }
 
